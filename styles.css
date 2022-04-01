@@ -25,6 +25,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--MainFont);
     line-height: 1.6;
@@ -52,6 +56,15 @@ img {
 
 a {
     text-decoration: none;
+}
+
+svg {
+    fill: var(--White);
+    transition: fill 200ms ease-in-out;
+}
+
+svg:hover {
+    fill: var(--LightBlue);
 }
 
 p {
@@ -332,6 +345,7 @@ nav img {
 
 .project-item svg {
     transition: fill 200ms ease-in-out;
+    fill: var(--DarkBlue);
 }
 
 .project-item svg:hover {
@@ -378,4 +392,66 @@ nav img {
 .project-details[open] summary {
     border-bottom: 1px solid var(--Grey);
     margin-bottom: .5em;
+}
+
+/***********/
+/* CONTACT */
+/***********/
+
+#contact {
+    background-color: var(--DarkBlue);
+}
+
+#contact p {
+    text-align: center;
+    color: var(--White);
+    font-size: 25px;
+    font-family: var(--RobotoFont);
+    margin-bottom: 40px;
+}
+
+#social-media-links {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#social-media-links a {
+    padding: 0 20px;
+}
+
+#social-media-links svg {
+    transition: fill 200ms ease-in-out;
+    fill: var(--White);
+}
+
+#social-media-links svg:hover {
+    fill: var(--LightBlue);
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer {
+    background-color: var(--DarkBlue);
+    padding-bottom: 40px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer p {
+    text-align: center;
+    color: var(--White);
+    font-size: 25px;
+    font-family: var(--RobotoFont);
+}
+
+#footer a {
+    margin-left: 20px;
 }
