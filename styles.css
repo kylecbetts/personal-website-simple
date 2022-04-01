@@ -1,0 +1,381 @@
+/*********/
+/* FONTS */
+/*********/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+/********************/
+/* GENERAL ELEMENTS */
+/********************/
+
+:root {
+    --RobotoFont: 'Roboto', sans-serif;
+    --RobotoMono: 'Roboto Mono', monospace;
+
+    --DarkBlue: #2B2C43;
+    --LightBlue: #05B7F2;
+    --Grey: #8D99AE;
+    --White: #EDF2F4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--MainFont);
+    line-height: 1.6;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+h1 {
+    font-family: var(--RobotoFont);
+    font-weight: 900;
+    font-size: 60px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: var(--RobotoFont);
+    font-weight: 300;
+}
+
+/*******************/
+/* GENERAL CLASSES */
+/*******************/
+
+.container {
+    max-width: 69.375em;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 2.5em;
+}
+
+.section-title {
+    font-family: var(--RobotoMono);
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--LightBlue);
+    margin-bottom: 35px;
+}
+
+.sub-heading {
+    font-family: var(--RobotoMono);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--LightBlue);
+    margin-bottom: 35px;
+}
+
+/*******/
+/* NAV */
+/*******/
+
+nav {
+    background-color: var(--DarkBlue);
+    width: 100%;
+    height: 50px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#center-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav hr {
+    width: calc((100% - 600px) / 2);
+    color: var(--Grey);
+}
+
+nav a {
+    font-family: var(--RobotoMono);
+    padding: 0 20px;
+    color: var(--Grey);
+}
+
+nav a:hover {
+    color: var(--LightBlue);
+    transition: color 200ms ease-in-out;
+}
+
+nav img {
+    height: 20px;
+    padding: 0 20px;
+}
+
+/********/
+/* HERO */
+/********/
+
+#hero {
+    height: calc(100vh - 50px);
+    background-color: var(--DarkBlue);
+    background-image: url("assets/two-face.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: auto 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#hero hr {
+    width: 50%;
+}
+
+#hero h1, h2 {
+    color: var(--White);
+}
+
+/*********/
+/* ABOUT */
+/*********/
+
+#about {
+    background-color: var(--White);
+}
+
+#about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about-content a {
+    width: 30%;
+}
+
+#about-content img {
+    margin-bottom: 20px;
+    filter: grayscale(90%);
+    box-shadow: 10px 10px 10px var(--Grey);
+    transition: filter 200ms ease-in-out;
+    transition: box-shadow 200ms ease-in-out;
+}
+
+#about-content img:hover {
+    filter: grayscale(10%);
+    box-shadow: 15px 15px 10px var(--Grey);
+}
+
+#about-content p {
+    width: 60%;
+    color: var(--DarkBlue);
+    font-size: 25px;
+}
+
+#about span {
+    color: var(--LightBlue);
+    font-weight: 400;
+}
+
+/**************/
+/* EXPERIENCE */
+/**************/
+
+#experience {
+    background-color: var(--DarkBlue);
+}
+
+#experience hr {
+    color: var(--Grey);
+    margin-bottom: 80px;
+}
+
+.experience-item {
+    margin-bottom: 80px;
+}
+
+.experience-item-overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+}
+
+.experience-item-text {
+    width: calc(100% - 280px);
+}
+
+.experience-item-overview a {
+    width: 250px;
+    text-align: center;
+}
+
+.experience-item-overview img {
+    filter: grayscale(90%) drop-shadow(10px 10px 10px black); 
+    transition: filter 200ms ease-in-out;
+}
+
+.experience-item-overview img:hover {
+    filter: grayscale(10%) drop-shadow(15px 15px 10px black);
+}
+
+.item-headline {
+    color: var(--White);
+    font-family: var(--RobotoMono);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.item-description {
+    color: var(--Grey);
+    font-family: var(--RobotoMono);
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.experience-details {
+    color: var(--Grey);
+    font-size: 20px;
+    font-family: var(--RobotoFont);
+    font-weight: 400;
+}
+
+.experience-details summary {
+    font-family: var(--RobotoFont);
+    color: var(--Grey);
+    font-size: 20px;
+    font-weight: 400;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+.experience-details summary:hover {
+    cursor: pointer;
+    color: var(--LightBlue);
+}
+
+.experience-details[open] {
+    padding: .5em;
+}
+
+.experience-details[open] summary {
+    border-bottom: 1px solid var(--Grey);
+    margin-bottom: .5em;
+}
+
+.experience-details-expanded {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.experience-details ol {
+    margin-left: 20px;
+}
+
+.experience-details img {
+    width: 400px;
+    filter: drop-shadow(10px 10px 10px black);
+}
+
+/************/
+/* PROJECTS */
+/************/
+
+#projects {
+    background-color: var(--White);
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+#projects .item-headline {
+    color: var(--DarkBlue);
+}
+
+.project-text-right {
+    width: calc(100% - 520px);
+    text-align: right;
+}
+
+.project-text-left {
+    width: calc(100% - 520px);
+    text-align: left;
+}
+
+.project-image {
+    width: 500px;
+    filter: drop-shadow(10px 10px 10px black); 
+}
+
+.project-item svg {
+    transition: fill 200ms ease-in-out;
+}
+
+.project-item svg:hover {
+    fill: var(--LightBlue);
+}
+
+.video-link {
+    color: var(--Grey);
+    font-size: 20px;
+    font-family: var(--RobotoFont);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.video-link:hover {
+    color: var(--LightBlue);
+}
+
+.project-details {
+    color: var(--Grey);
+    font-size: 20px;
+    font-family: var(--RobotoFont);
+    font-weight: 400;
+}
+
+.project-details summary {
+    font-family: var(--RobotoFont);
+    color: var(--Grey);
+    font-size: 20px;
+    font-weight: 400;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+.project-details summary:hover {
+    cursor: pointer;
+    color: var(--LightBlue);
+}
+
+.project-details[open] {
+    padding: .5em;
+}
+
+.project-details[open] summary {
+    border-bottom: 1px solid var(--Grey);
+    margin-bottom: .5em;
+}
