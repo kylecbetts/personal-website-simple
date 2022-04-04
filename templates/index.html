@@ -11,27 +11,32 @@
     <body>
         <header>
             <nav>
-                <hr>
+                <hr class="hide-for-tablet-and-mobile">
+
                 <div id="center-links">
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
+                    <a class="hide-for-mobile" href="#about">About</a>
+                    <a class="hide-for-mobile" href="#experience">Experience</a>
                     <img src="{{ url_for('static',filename='images/logo.png') }}" />
-                    <a href="#projects">Projects</a>
+                    <a class="hide-for-mobile" href="#projects">Projects</a>
                     <a href="{{ url_for('static',filename='files/betts-resume.pdf') }}">Resume</a>
                 </div>
-                <hr>
+
+                <hr class="hide-for-tablet-and-mobile">
             </nav>
         </header>
 
         <section id="hero" style="background-image: url('/static/images/two-face.png');">
-            <h1>Kyle Betts</h1>
-            <hr>
-            <h2>Professional Hockey Player & Software Engineer</h2>
+            <div id="hero-text">
+                <h1>Kyle Betts</h1>
+                <hr>
+                <h2>Professional Hockey Player & Software Engineer</h2>
+            </div>
+            
         </section>
 
         <section id="about">
             <div class="container">
-                <h1 class="section-title">About Me</h1>
+                <h3 class="section-title">About Me</h3>
                 <div id="about-content">
                     <p>
                         I am a professional hockey player currently with the 
@@ -41,15 +46,17 @@
                         Engineering</span>. I have focussed my studies in robotics, 
                         machine learning and data visualization.
                     </p>
-                    <a href="https://cornellbigred.com/news/2021/3/22/mens-ice-hockey-betts-named-ecac-hockey-student-athlete-of-the-year.aspx"><img src="{{ url_for('static',filename='images/student-athlete.jpeg') }}" /></a>
+                    <a href="https://cornellbigred.com/news/2021/3/22/mens-ice-hockey-betts-named-ecac-hockey-student-athlete-of-the-year.aspx">
+                        <img class="grey-image" src="{{ url_for('static',filename='images/student-athlete.jpeg') }}" />
+                    </a>
                 </div>
             </div>
         </section>
 
         <section id="experience">
             <div class="container">
-                <h1 class="section-title">Experience</h1>
-                <h2 class="sub-heading">Software Engineering</h2>
+                <h3 class="section-title">Experience</h3>
+                <h4 class="sub-heading">Software Engineering</h4>
 
                 <div class="experience-item">
                     <div class="experience-item-overview">
@@ -57,7 +64,9 @@
                             <p class="item-headline">Ava Labs - Associate Developer</p>
                             <p class="item-description">January 2021 - August 2021</p>
                         </div>
-                        <a href="https://www.avalabs.org/"><img src="{{ url_for('static',filename='images/experience/software/ava-labs.png') }}" height="80px" /></a>
+                        <a href="https://www.avalabs.org/">
+                            <img class="grey-image-png" src="{{ url_for('static',filename='images/experience/software/ava-labs.png') }}" height="80px" />
+                        </a>
                     </div>
                     <details class="experience-details">
                         <summary>Show More</summary>
@@ -78,7 +87,9 @@
                             <p class="item-headline">Jamex - Software Engineer Intern</p>
                             <p class="item-description">Summer 2018, 2019, & 2020</p>
                         </div>
-                        <a href="https://jamexvending.com/"><img src="{{ url_for('static',filename='images/experience/software/jamex.png') }}" height="80px" /></a>
+                        <a href="https://jamexvending.com/">
+                            <img class="grey-image-png" src="{{ url_for('static',filename='images/experience/software/jamex.png') }}" height="80px" />
+                        </a>
                     </div>
                     <details class="experience-details">
                         <summary>Show More</summary>
@@ -95,7 +106,7 @@
 
                 <hr>
 
-                <h2 class="sub-heading">Ice Hockey</h2>
+                <h4 class="sub-heading">Ice Hockey</h4>
 
                 <div class="experience-item">
                     <div class="experience-item-overview">
@@ -104,7 +115,9 @@
                             <p class="item-description">March 2022 - Present</p>
                             
                         </div>
-                        <a href="https://www.coloradoeagles.com/"><img src="{{ url_for('static',filename='images/experience/hockey/eagles.png') }}" height="120px" /></a>
+                        <a href="https://www.coloradoeagles.com/">
+                            <img class="grey-image-png" src="{{ url_for('static',filename='images/experience/hockey/eagles.png') }}" height="120px" />
+                        </a>
                     </div>
                     <details class="experience-details">
                         <summary>Show More</summary>
@@ -125,7 +138,9 @@
                             <p class="item-headline">Cornell Big Red - NCAA D1</p>
                             <p class="item-description">August 2017 - March 2022</p>
                         </div>
-                        <a href="https://cornellbigred.com/sports/mens-ice-hockey"><img src="{{ url_for('static',filename='images/experience/hockey/cornell.png') }}" height="140px"/></a>
+                        <a href="https://cornellbigred.com/sports/mens-ice-hockey">
+                            <img class="grey-image-png" src="{{ url_for('static',filename='images/experience/hockey/cornell.png') }}" height="140px"/>
+                        </a>
                     </div>
                     <details class="experience-details">
                         <summary>Show More</summary>
@@ -150,7 +165,9 @@
                             <p class="item-headline">Team Canada West U19 - International</p>
                             <p class="item-description">December 2015 & 2016</p>
                         </div>
-                        <a href="https://www.hockeycanada.ca/en-ca/home"><img src="{{ url_for('static',filename='images/experience/hockey/canada.png') }}" height="140px"/></a>
+                        <a href="https://www.hockeycanada.ca/en-ca/home">
+                            <img class="grey-image-png" src="{{ url_for('static',filename='images/experience/hockey/canada.png') }}" height="140px"/>
+                        </a>
                     </div>
                     <details class="experience-details">
                         <summary>Show More</summary>
@@ -172,7 +189,9 @@
                             <p class="item-headline">Powell River Kings - BCHL</p>
                             <p class="item-description">August 2015 - March 2017</p>
                         </div>
-                        <a href="https://www.powellriverkings.com/"><img src="{{ url_for('static',filename='images/experience/hockey/powell-river.png') }}" height="100px"/></a>
+                        <a href="https://www.powellriverkings.com/">
+                            <img class="grey-image-png" src="{{ url_for('static',filename='images/experience/hockey/powell-river.png') }}" height="100px"/>
+                        </a>
                     </div>
                     <details class="experience-details">
                         <summary>Show More</summary>
@@ -194,9 +213,9 @@
 
         <section id="projects">
             <div class="container">
-                <h1 class="section-title">Projects</h1>
+                <h3 class="section-title">Projects</h3>
 
-                <div class="project-item">
+                <div class="project-item-reverse">
                     <div class="project-image">
                         <img src="{{ url_for('static',filename='images/projects/air-hockey.png') }}" />
                     </div>
@@ -222,7 +241,6 @@
                         <p class="item-headline">Maze Traversing Robot</p>
                         <p class="item-description">Intelligent Physical Systems</p>
                         <p class="item-description">Arduino Uno | C | Verilog</p>
-                        <a class="video-link" href="https://www.youtube.com/watch?v=Kp07wnzYQGI&t=1s">Watch Video</a>
                         <details class="project-details">
                             <summary>Show More</summary>
                             <div class="project-details-expanded">
@@ -234,6 +252,9 @@
                         <a href="https://github.coecis.cornell.edu/ih258/ECE3400_Group6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         </a>
+                        <a href="https://www.youtube.com/watch?v=Kp07wnzYQGI&t=1s">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/></svg>
+                        </a>
                     </div>
 
                     <div class="project-image">
@@ -241,7 +262,7 @@
                     </div>
                 </div>
 
-                <div class="project-item">
+                <div class="project-item-reverse">
                     <div class="project-image">
                         <img src="{{ url_for('static',filename='images/projects/skating.png') }}" />
                     </div>
@@ -268,7 +289,6 @@
                         <p class="item-headline">Simon Says Game</p>
                         <p class="item-description">Embedded Systems</p>
                         <p class="item-description">C | C++ | NXP FRDM-K64F</p>
-                        <a class="video-link" href="https://www.youtube.com/watch?v=ar0LtV_kiFQ&t=1s">Watch Video</a>
                         <details class="project-details">
                             <summary>Show More</summary>
                             <div class="project-details-expanded">
@@ -278,6 +298,9 @@
                         </details>
                         <a href="https://github.coecis.cornell.edu/ece3140-sp2020/kcb82">
                             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=ar0LtV_kiFQ&t=1s">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z"/></svg>
                         </a>
                     </div>
 
@@ -291,7 +314,7 @@
 
         <section id="contact">
             <div class="container">
-                <h1 class="section-title">Contact</h1>
+                <h3 class="section-title">Contact</h3>
                 <p>Contact me to chat!</p>
                 <div id="social-media-links">
                     <a href="mailto: kcb82@cornell.edu">
@@ -314,11 +337,15 @@
         </section>
 
         <footer>
-            <div class="container" id="footer">
+            <div class="container footer-flex">
                 <p>Designed & Built by Kyle Betts</p>
                 <a href="https://github.com/kylecbetts/personal-website">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                 </a>
+            </div>
+            <div class="container footer-flex">
+                <p>Powered by Google App Engine</p>
+                <img src="{{ url_for('static',filename='images/app-engine.png') }}" />
             </div>
         </footer>
 
