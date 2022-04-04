@@ -254,6 +254,21 @@ nav img {
     height: 20px;
 }
 
+#resume {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--LightBlue);
+    transition: background-color 200ms ease-in-out;
+}
+
+#resume:hover {
+    background-color: var(--White);
+}
+
+#about-link {
+    padding: 5px 10px;
+}
+
 @media screen and (min-width: 481px) and (max-width: 868px) {
     nav {
         justify-content: center;
